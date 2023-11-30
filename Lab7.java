@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
+
 //Data Mangagment Imports
 import java.util.ArrayList;
 import java.text.DecimalFormat;
@@ -57,7 +58,7 @@ public class Lab7 {
                 quantity.add(Integer.parseInt(sp[0]));
                 discount.add(Double.parseDouble(sp[4]));
 
-                //Calculates the total price for each line of the Order Details file.
+                //Calculates the total price for each line of the Order Details file
                 double total = unitPrice.get(counter) * quantity.get(counter) - (discount.get(counter) * quantity.get(counter) * unitPrice.get(counter));
 
                 //Writes prices in order of ID Number
@@ -67,11 +68,12 @@ public class Lab7 {
 
             }
 
+        //Close the reader and writer, inform the user the program has finished running
         reader.close();
         totalWriter.close();
         System.out.println("Succesfully wrote file.");
 
-
+        //Error catchers
         }
         catch (FileNotFoundException exc) {
             System.out.println("An Error Occured.");
